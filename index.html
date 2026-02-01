@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Health Dos and Don’ts</title>
+
+  <style>
+    /* ===== Base ===== */
+    * {
+      transition: all 0.25s ease;
+    }
+
+    body {
+      margin: 0;
+      padding: 40px;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background-color: #121212;
+      color: #e0e0e0;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      background: #1b1b1b;
+      padding: 40px;
+      border-radius: 14px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+
+    .intro {
+      text-align: center;
+      color: #b5b5b5;
+      margin-bottom: 40px;
+    }
+
+    /* ===== Sections ===== */
+    .section {
+      margin-bottom: 55px;
+      opacity: 0;
+      transform: translateY(25px);
+      animation: fadeUp 0.8s ease forwards;
+    }
+
+    .section:nth-of-type(1) { animation-delay: 0.1s; }
+    .section:nth-of-type(2) { animation-delay: 0.2s; }
+    .section:nth-of-type(3) { animation-delay: 0.3s; }
+    .section:nth-of-type(4) { animation-delay: 0.4s; }
+    .section:nth-of-type(5) { animation-delay: 0.5s; }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .section-header img {
+      width: 120px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 8px;
+      filter: grayscale(100%);
+    }
+
+    .section-header img:hover {
+      transform: scale(1.05);
+      filter: grayscale(0%);
+    }
+
+    h2 {
+      margin: 0;
+      color: #ffffff;
+      border-left: 4px solid #4CAF50; /* accent صحي */
+      padding-left: 12px;
+    }
+
+    /* ===== Lists ===== */
+    .lists {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+
+    .box {
+      background: #2a2a2a;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .box:hover {
+      transform: translateY(-6px);
+      background: #303030;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+    }
+
+    /* ===== Do / Don’t Colors ===== */
+    .box.do h3 {
+      color: #9CCC65; /* أخضر */
+    }
+
+    .box.dont h3 {
+      color: #EF5350; /* أحمر معتدل */
+    }
+
+    .box.do li:hover {
+      color: #C5E1A5; /* أخضر فاتح عند hover */
+    }
+
+    .box.dont li:hover {
+      color: #FF8A80; /* أحمر فاتح عند hover */
+    }
+
+    ul {
+      padding-left: 18px;
+      margin: 0;
+    }
+
+    li {
+      margin-bottom: 8px;
+      font-size: 14px;
+      color: #d0d0d0;
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 768px) {
+      .lists {
+        grid-template-columns: 1fr;
+      }
+
+      .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .section-header img {
+        width: 100%;
+        height: 160px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+  <h1>Health Dos and Don’ts</h1>
+  <p class="intro">Today I will talk about some tips to stay healthy.</p>
+
+  <!-- Food -->
+  <div class="section">
+    <div class="section-header">
+      <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061" alt="">
+      <h2>Food and Drink</h2>
+    </div>
+    <div class="lists">
+      <div class="box do">
+        <h3>Do</h3>
+        <ul>
+          <li>Eat healthy food.</li>
+          <li>Drink a lot of water.</li>
+          <li>Eat fruit and vegetables.</li>
+        </ul>
+      </div>
+      <div class="box dont">
+        <h3>Don’t</h3>
+        <ul>
+          <li>Don’t eat a lot of fast food.</li>
+          <li>Don’t drink a lot of soda.</li>
+          <li>Don’t skip meals.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sleep -->
+  <div class="section">
+    <div class="section-header">
+      <img src="https://images.unsplash.com/photo-1541781774459-bb2af2f05b55" alt="">
+      <h2>Sleep</h2>
+    </div>
+    <div class="lists">
+      <div class="box do">
+        <h3>Do</h3>
+        <ul>
+          <li>Sleep early at night.</li>
+          <li>Sleep 7 to 8 hours.</li>
+          <li>Take rest before sleeping.</li>
+        </ul>
+      </div>
+      <div class="box dont">
+        <h3>Don’t</h3>
+        <ul>
+          <li>Don’t stay awake late.</li>
+          <li>Don’t use your phone in bed.</li>
+          <li>Don’t sleep very little.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Exercise -->
+  <div class="section">
+    <div class="section-header">
+      <img src="https://images.unsplash.com/photo-1554284126-aa88f22d8b74" alt="">
+      <h2>Exercise</h2>
+    </div>
+    <div class="lists">
+      <div class="box do">
+        <h3>Do</h3>
+        <ul>
+          <li>Do exercise every week.</li>
+          <li>Walk or play sports.</li>
+          <li>Warm up before exercise.</li>
+        </ul>
+      </div>
+      <div class="box dont">
+        <h3>Don’t</h3>
+        <ul>
+          <li>Don’t sit for a long time.</li>
+          <li>Don’t exercise too much.</li>
+          <li>Don’t exercise when you are tired.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stress -->
+  <div class="section">
+    <div class="section-header">
+      <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773" alt="">
+      <h2>Stress</h2>
+    </div>
+    <div class="lists">
+      <div class="box do">
+        <h3>Do</h3>
+        <ul>
+          <li>Take breaks.</li>
+          <li>Talk to your friends.</li>
+          <li>Listen to calm music.</li>
+        </ul>
+      </div>
+      <div class="box dont">
+        <h3>Don’t</h3>
+        <ul>
+          <li>Don’t worry too much.</li>
+          <li>Don’t work for a long time.</li>
+          <li>Don’t keep your problems inside.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Illness -->
+  <div class="section">
+    <div class="section-header">
+      <img src="https://images.unsplash.com/photo-1584036561566-baf8f5f1b144" alt="">
+      <h2>Avoiding & Recovering from Illness</h2>
+    </div>
+    <div class="lists">
+      <div class="box do">
+        <h3>Do</h3>
+        <ul>
+          <li>Rest when you are sick.</li>
+          <li>Take medicine.</li>
+          <li>Drink warm drinks.</li>
+        </ul>
+      </div>
+      <div class="box dont">
+        <h3>Don’t</h3>
+        <ul>
+          <li>Don’t go out when you feel sick.</li>
+          <li>Don’t ignore your illness.</li>
+          <li>Don’t eat junk food.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
